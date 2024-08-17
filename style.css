@@ -1,0 +1,142 @@
+:root{
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydark: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    background-color: var(--Verylightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+.container{
+    display: grid;
+    columns: 3;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.card{
+    grid-row: 1;
+    padding: 48px;
+    max-width:305px;
+}
+
+.sedans {
+    background-color: var(--Brightorange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.suv{
+    background-color: var(--Darkcyan);
+}
+
+.lux{
+    background-color: var(--Verydark);
+    border-top-right-radius: 10px;    
+    border-bottom-right-radius: 10px;    
+}
+
+p{
+    color: var(--Transparentwhite);
+    margin-bottom: 86px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+h1{
+    color: var(--Verylightgray);
+    font-weight: 500;
+    margin-top: 30px; font-family: "Big Shoulders Display", sans-serif;
+}
+
+button{
+    border: transparent;
+    background-color: var(--Verylightgray);
+    border-radius: 35px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: "Lexend Deca", sans-serif;
+    /* width: 134px; */
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.sedans button{
+    color: var(--Brightorange);
+}
+
+.suv button{
+    color: var(--Darkcyan);
+}
+
+.lux button{
+    color: var(--Verydark);
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--Verylightgray);
+    border: 2px solid var(--Verylightgray);
+}
+
+@media only screen and (max-width:426px){
+    body{
+        height: auto;
+    }
+
+    .container{
+        width: 100%;
+       padding: 0 30px;
+    }
+    
+    .sedans {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+        grid-row: 1;
+        margin-top: 30px;
+    }
+    
+.suv{
+    grid-row: 2;
+}
+
+    .lux{
+        border-bottom-left-radius: 10px;    
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+        grid-row: 3;    
+    }
+}
+
+@media only screen and (max-width: 321px){
+    .container{
+        padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 769px){
+    .container{
+        margin: auto;
+    }
+}
